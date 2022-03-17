@@ -1,4 +1,4 @@
-class Barang (nama: String, harga: Int = 100000, jumlah: Int = 1, diskon: Double = 0.2) {
+class Barang (nama: String, harga: Int = 100000, jumlah: Int = 1, diskon: Int = 5) {
     val nama = nama
     var harga = harga
     var jumlah = jumlah
@@ -12,7 +12,7 @@ class Barang (nama: String, harga: Int = 100000, jumlah: Int = 1, diskon: Double
     }
 
     fun hitungTotal () {
-        var potongan = harga * jumlah * diskon
+        var potongan = harga * jumlah * diskon/100
         var totalHarga = harga - potongan
         println("Total diskon: " +potongan)
         println("Total Pembayaran: " +totalHarga)
